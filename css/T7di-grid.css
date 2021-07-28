@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.p-container {
+    min-height: 250vh ;
+    padding: 30px 15px;
+    margin: 0 auto;
+}
+/*Small*/
+@media (min-width: 786px) {
+    .p-container {
+        width: 750px;
+    }
+}
+/*Medium*/
+@media (min-width: 992px) {
+    .p-container {
+        width: 970px ;
+    }  
+}
+/*Large*/
+@media (min-width: 1200px) {
+    .p-container {
+        width: 1170px ;
+    }  
+}
+
+h5 {
+    color: lightsteelblue;
+}
+.p-1 {
+    font-weight: bold;
+}
+.p-2 {
+    color: darkgray;
+}
+.light {
+    background-color: white;
+    padding: 20px;
+    border-bottom: 2px solid #f63e04;
+    line-height: 1.5;
+    border-radius: 7px;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.2);
+}
+.dark {
+    background-color: black;
+    padding: 20px;
+    border-bottom: 2px solid #f63e04;
+    line-height: 1.5;
+    color: white;
+    border-radius: 7px;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.2);
+}
+
+.p-container > div {
+    border-radius: 7px;
+}
+
+.p-container {
+    background-color: #FFf;
+    display: grid;
+    grid-template-columns: repeat( 4,1fr) ;
+    grid-template-rows: auto auto auto auto auto ;
+    grid-gap: 10px;
+
+    grid-template-areas: 
+    "one one two three" 
+    "four five five three"
+    "four six six three"
+    "seven eight nine ten"
+    "foot foot foot foot";
+}
+.p-container .one {
+    grid-area: one;
+}
+.p-container .two {
+    grid-area: two;
+}
+.p-container .three {
+    grid-area: three;
+}
+.p-container .four {
+    grid-area: four;
+}
+.p-container .five {
+    grid-area: five;
+}
+.p-container .six {
+    grid-area: six;
+}
+.p-container .seven {
+    grid-area: seven;
+}
+.p-container .eight {
+    grid-area: eight;
+}
+.p-container .nine {
+    grid-area: nine;
+}
+.p-container .ten {
+    grid-area: ten;
+}
+footer {
+    grid-area: foot;
+    background-color: hsl(260, 8%, 14%);
+    text-align: center;
+    padding: 20px;
+}
+footer a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}

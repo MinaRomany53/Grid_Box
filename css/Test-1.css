@@ -1,0 +1,95 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    color: #fff;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.container {
+    min-height: 100vh;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+/*Small*/
+@media (min-width: 786px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/*Medium*/
+@media (min-width: 992px) {
+    .container {
+        width: 970px ;
+    }  
+}
+
+/*Large*/
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px ;
+    }  
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 70px 200px 1fr 70px;
+    grid-gap: 15px;
+    grid-template-areas: 
+    "head head head head"
+    "box-1 box-2 box-3 side"
+    "cont cont cont side"
+    "foot foot foot foot";
+}
+.container > div {
+    background-color: dodgerblue;
+    padding: 20px 10px;  
+}
+.header {
+    grid-area: head ;
+}
+.box {
+    grid-area: box-1;
+}
+.box:nth-child(2) {
+    grid-area: box-2;
+}
+.box:nth-child(3) {
+    grid-area: box-3;
+}
+.sidebar {
+    grid-area: side;
+}
+.content {
+    grid-area: cont;
+}
+footer {
+    grid-area: foot;
+    text-align: center;
+    background-color: dodgerblue;
+    padding: 20px;
+}
+footer a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
